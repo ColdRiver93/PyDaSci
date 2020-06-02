@@ -1,10 +1,10 @@
 from setuptools import setup
 
-__version__ = '0.0.1'
+__version__ = '1.0.0'
 
 
 def readme():
-    with open('README.txt') as f:
+    with open('readme.txt') as f:
         return f.read()
 
 

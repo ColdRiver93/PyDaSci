@@ -11,3 +11,6 @@ pydasci example.pds
 
 If everything works, congratulations! Yoy have now installed PyDaSci
 DSL in your computer.
+
+pds_np++ is a Notepad++ user defined language archive that can me imported to
+style the .pds extension scripts making them easier to read.

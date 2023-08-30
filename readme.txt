@@ -1,4 +1,4 @@
-PyDaScy
+PyDaSci
 Created by Juan Riofrio.
 
 Run the setup_pds.py script with:

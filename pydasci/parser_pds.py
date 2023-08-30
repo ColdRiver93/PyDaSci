@@ -14,7 +14,10 @@ from sklearn.mixture import GaussianMixture
 SOL = {}
 class Parser():
  def __init__(self):
-    self.pg = ParserGenerator(['ADD','COLON','PREDICTION','CLUSTERING','FLOAT','STATS','PLOT','C_PLOT', 'SENTENCE','PRINT', 'FORECAST', 'VAR', 'EQUAL', 'INT', 'OPEN_BRA', 'CLOSE_BRA' ,'OPEN_PAREN', 'CLOSE_PAREN','SEMI_COLON', 'COMA' ,'METHOD', 'BOOLEAN', 'TYPE_A'])
+    self.pg = ParserGenerator(['ADD','COLON','PREDICTION','CLUSTERING','FLOAT','STATS',
+    'PLOT','C_PLOT', 'SENTENCE','PRINT', 'FORECAST', 'VAR', 'EQUAL', 'INT', 'OPEN_BRA',
+    'CLOSE_BRA' ,'OPEN_PAREN', 'CLOSE_PAREN','SEMI_COLON', 'COMA' ,'METHOD', 'BOOLEAN',
+    'TYPE_A'])
  def parse(self):
     @self.pg.production('main : main assignment')
     @self.pg.production('main : assignment')
@@ -282,4 +285,4 @@ class SARIMA(Method):
         
 class EXPSM(Method):
     def eval(self):
-        return ExponentialSmoothing(self.ts, trend=self.args[0], damped = self.args[1], seasonal=self.args[2], seasonal_periods=self.args[3]).fit(use_boxcox=True)
+        return ExponentialSmoothing(self.ts, trend=self.args[0], damped = self.args[1], seasonal=self.args[2], seasonal_periods=self.args[3]).fit()
